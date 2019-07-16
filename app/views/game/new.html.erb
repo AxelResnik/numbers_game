@@ -1,0 +1,5 @@
+<% number = [] %>
+<% until number.uniq.length == 4 %>
+<% number = Array.new(4) { rand(1..9) } %>
+<% end %>
+<%= number %>
