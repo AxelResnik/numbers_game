@@ -2,6 +2,6 @@ class GameController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new]
 
   def rand_number
-    @number = rand(1000...9999)
+    number = Array.new(4) { rand(1..9) } until number.uniq.length == 4
   end
 end
